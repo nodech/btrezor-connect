@@ -1,0 +1,10 @@
+{
+  "name": "btrezor-connect",
+  "private": true,
+  "version": "0.0.0",
+  "main": "./index.js",
+  "dependencies": {
+    "trezor-connect": "extended",
+    "bfile": "^0.2.1"
+  }
+}

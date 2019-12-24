@@ -1,0 +1,19 @@
+{
+  "name": "btrezor-connect",
+  "version": "0.0.0",
+  "description": "zero-dependency trezor-connect",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodar-chkuaselidze/btrezor-connect.git"
+  },
+  "keywords": [
+    "trezor"
+  ],
+  "author": "Nodari Chkuaselidze <nodar.chkuaselidze@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nodar-chkuaselidze/btrezor-connect/issues"
+  },
+  "homepage": "https://github.com/nodar-chkuaselidze/btrezor-connect#readme"
+}
