@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "main": "./index.js",
   "dependencies": {
-    "trezor-connect": "extended",
+    "trezor-connect": "https://github.com/nodar-chkuaselidze/connect#release",
     "bfile": "^0.2.1"
   }
 }

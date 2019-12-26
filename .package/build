@@ -24,6 +24,7 @@ const {
 const ROOT = resolve(__dirname, '..');
 const INDEX_JS = join(ROOT, 'index.js');
 const PACKAGE_JSON = join(ROOT, 'package.json');
+const PACKAGE_LOCK_ROOT = join(ROOT, 'package-lock.json');
 
 // ./bin
 const BIN = join(ROOT, 'bin');
@@ -302,19 +303,18 @@ async function main() {
     await fs.mkdirp(PACKAGE_MODULES, 0o755);
 
     await exec(PACKAGE, ['npm', 'install',
-                         '--production',
-                         '--no-package-lock']);
+                         '--production' ]);
   } else {
     await fs.copy(process.argv[2], PACKAGE_MODULES);
   }
 
   // Clean up NPM crap.
   await clean(PACKAGE_MODULES);
-  await fs.remove(PACKAGE_LOCK);
 
   // Move node_modules to vendor directory.
   await fs.remove(NODE_MODULES);
   await fs.rename(PACKAGE_MODULES, NODE_MODULES);
+  await fs.rename(PACKAGE_LOCK, PACKAGE_LOCK_ROOT);
 
   // Create our index file which points to trezor-connect.
   {
