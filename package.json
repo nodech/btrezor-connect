@@ -1,6 +1,6 @@
 {
   "name": "btrezor-connect",
-  "version": "0.0.0",
+  "version": "8.0.13-extended-1",
   "description": "zero-dependency trezor-connect",
   "main": "index.js",
   "repository": {
